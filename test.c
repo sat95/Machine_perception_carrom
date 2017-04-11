@@ -45,10 +45,10 @@ void print_database(img **database,int *size)
 	for(i=0;i<CLASSES;i++)
 	{
 		if(size[i])
-			printf("(%d)\n",i+1);
+			printf("%d%% Class\n",(i+1)*10);
 		for(j=0;j<size[i];j++)
 		{
-			printf("(%d) %s -> %d %d %.2f\n"
+			printf("%d) %s -> %d %d %.2f\n"
 				,database[i][j].pos
 				,database[i][j].path
 				,database[i][j].c[0]
