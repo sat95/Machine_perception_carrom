@@ -7,7 +7,8 @@ void src_loc_set(char *src_loc,int num,char *arg)
 {
 	char buffer[5];
 	sprintf(buffer,"%d",num);
-	strcpy(src_loc,"dataset/");
+	strcpy(src_loc,arg);
+	strcat(src_loc,"dataset/");
 	strcat(src_loc,arg);
 	strcat(src_loc,buffer);
 	strcat(src_loc,".jpg");

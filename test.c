@@ -165,7 +165,7 @@ img *search_database(img **database,int *size, img *input, img *output)
 }
 int main(int argc, char **argv)
 {
-	int size[10]={0},i_x,i_y;
+	int size[10]={0};
 	double i_mag;
 	img **database,*output,*input;
 	database = (img **)malloc(CLASSES*sizeof(img *));
