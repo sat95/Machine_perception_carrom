@@ -118,7 +118,7 @@ img *search_database(img **database,int *size, img *input, img *output)
 {
 	int i,k;
 	double i_mag = input->mag;
-	double eucl_dist,dist,dist_l,dist_r,min_dist=INT_MAX;
+	double eucl_dist,dist,dist_l,dist_r,min_dist=INT_MAX,prev_dist;
 	img *prev,*curr,*left,*right,*temp;
 	for(i=0;i<CLASSES;i++)
 		if(size[i]){
@@ -129,8 +129,10 @@ img *search_database(img **database,int *size, img *input, img *output)
 			//printf("eucl_dist=%.2f for %s\n",eucl_dist,prev->path);
 			curr = prev;
 			temp = prev;
+			prev_dist = dist;
 			do{
 				prev = temp;
+				prev_dist = dist;
 				if(curr->pos-k>=0){
 					//printf("curr->pos-k>=0 k=%d %d>=%d\n",k,curr->pos-k,0);
 					left = curr-k;
@@ -153,10 +155,15 @@ img *search_database(img **database,int *size, img *input, img *output)
 				else if(dist_l>dist_r) {dist = dist_r; temp = right;}
 				k++;
 			}while(dist<=eucl_dist);
-			if(abs(prev->mag-i_mag)<=abs(output->mag-i_mag)&&min_dist>=dist){
-				min_dist=dist;
+			//printf("min_dist = %.2f prev_dist = %.2f\n",min_dist,prev_dist);
+			if(abs(min_dist-prev_dist)<5){
+				min_dist=(min_dist>=prev_dist)?prev_dist:min_dist;
 				output = prev;
-			} 
+			}
+			else
+			{
+				min_dist=(min_dist>=prev_dist)?prev_dist:min_dist;
+			}
 		}
 	return output;
 }
