@@ -134,16 +134,12 @@ img *search_database(img **database,int *size, img *input, img *output)
 				prev = temp;
 				prev_dist = dist;
 				if(curr->pos-k>=0){
-					//printf("curr->pos-k>=0 k=%d %d>=%d\n",k,curr->pos-k,0);
 					left = curr-k;
 					dist_l = sqrt(pow(left->c[0]-input->c[0],2)+pow(left->c[1]-input->c[1],2));
-					//printf("dist_l=%.2f\n",dist_l);	
 				}
 				if(curr->pos+k<size[i]){
-					//printf("curr->pos+k<size[i] k=%d %d<%d\n",k,curr->pos+k,size[i]);
 					right = curr+k;
 					dist_r = sqrt(pow(right->c[0]-input->c[0],2)+pow(right->c[1]-input->c[1],2));
-					//printf("dist_r=%.2f\n",dist_r);
 				}
 				if(curr->pos-k<0||curr->pos+k>=size[i]){
 					
