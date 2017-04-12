@@ -1,3 +1,4 @@
+Coin Position :1_
 P(1) = 7.5 Aprrox = 8.0
 P(2) = 12.5 Aprrox = 13.0
 P(3) = 10.0 Aprrox = 10.0
@@ -20,3 +21,28 @@ Class(8) -> 30%
 Class(9) -> 40%
 Class(10) -> 30%
 Class(11) -> 30%
+
+Coin Position :2_
+P(1) = 40.0 Aprrox = 40.0
+P(2) = 25.0 Aprrox = 25.0
+P(3) = 17.5 Aprrox = 18.0
+P(4) = 15.0 Aprrox = 15.0
+P(5) = 10.0 Aprrox = 10.0
+P(6) = 15.0 Aprrox = 15.0
+P(7) = 15.0 Aprrox = 15.0
+P(8) = 0.0 Aprrox = 0.0
+P(9) = 5.0 Aprrox = 5.0
+P(10) = 7.5 Aprrox = 8.0
+P(11) = 2.5 Aprrox = 3.0
+Class(1) -> 50%
+Class(2) -> 30%
+Class(3) -> 20%
+Class(4) -> 20%
+Class(5) -> 20%
+Class(6) -> 20%
+Class(7) -> 20%
+Class(8) -> 10%
+Class(9) -> 10%
+Class(10) -> 10%
+Class(11) -> 10%
+
