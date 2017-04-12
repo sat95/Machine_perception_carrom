@@ -35,7 +35,10 @@ void execute_cmd(char *cmd ,char *src_loc, char *dst_loc)
 }
 int main(int argc, char **argv)
 {
-	FILE *fp = fopen("data.txt","r+"),*src,*dst;
+	char *data = (char *)malloc(20);
+	strcpy(data,argv[1]);
+	strcat(data,"data.txt");
+	FILE *fp = fopen(data,"r+"),*src,*dst;
 	double pr[11]={0};
 	int i,j,num,diff=0;
 	char res,*src_loc,*dst_loc,*command;
