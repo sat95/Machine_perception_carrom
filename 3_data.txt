@@ -1,0 +1,35 @@
+1 m 2 m 3 m 4 m 5 m 6 h 7 m 8 m 9 h 10 m
+1 m 2 h 3 m 4 m 5 m 6 m 7 m 8 m 9 m 10 h
+1 m 2 m 3 h 4 m 5 m 6 m 7 m 8 h 9 h 10 m
+1 h 2 m 3 h 4 m 5 m 6 h 7 m 8 m 9 m 10 m
+1 m 2 h 3 m 4 m 5 h 6 h 7 h 8 m 9 m 10 m
+1 m 2 h 3 m 4 m 5 m 6 m 7 h 8 m 9 m 10 m
+1 m 2 m 3 m 4 m 5 m 6 m 7 h 8 m 9 h 10 m
+1 m 2 m 3 m 4 m 5 h 6 m 7 m 8 m 9 m 10 m
+1 m 2 h 3 h 4 m 5 h 6 m 7 h 8 m 9 h 10 h
+1 m 2 h 3 h 4 h 5 h 6 m 7 m 8 m 9 m 10 h
+1 m 2 m 3 m 4 m 5 h 6 m 7 m 8 h 9 m 10 h
+
+
+1 m 2 m 3 m 4 m 5 m 6 m 7 m 8 m 9 m 10 m
+1 h 2 m 3 m 4 h 5 m 6 m 7 h 8 m 9 m 10 m
+1 m 2 m 3 m 4 m 5 m 6 m 7 m 8 m 9 h 10 m
+1 m 2 m 3 h 4 m 5 m 6 m 7 m 8 m 9 m 10 h
+1 m 2 h 3 m 4 m 5 m 6 m 7 m 8 m 9 h 10 m
+1 m 2 m 3 m 4 h 5 h 6 m 7 m 8 m 9 m 10 m
+1 h 2 m 3 m 4 m 5 m 6 m 7 m 8 m 9 m 10 m
+1 m 2 m 3 m 4 m 5 m 6 h 7 m 8 m 9 h 10 m
+1 h 2 h 3 m 4 m 5 h 6 h 7 m 8 h 9 m 10 h
+1 m 2 m 3 h 4 m 5 m 6 m 7 m 8 h 9 m 10 m
+1 m 2 m 3 m 4 h 5 m 6 m 7 m 8 m 9 m 10 m
+
+1 m 2 m 3 m 4 m 5 m 6 m 7 m 8 m 9 m 10 m
+1 m 2 m 3 m 4 m 5 m 6 h 7 m 8 m 9 m 10 m
+1 m 2 h 3 m 4 h 5 h 6 m 7 m 8 m 9 m 10 m
+1 m 2 h 3 m 4 m 5 m 6 m 7 m 8 m 9 h 10 m
+1 m 2 m 3 h 4 m 5 m 6 m 7 h 8 m 9 h 10 m
+1 h 2 m 3 m 4 m 5 m 6 m 7 m 8 m 9 h 10 m
+1 m 2 m 3 m 4 m 5 m 6 m 7 h 8 m 9 h 10 m
+1 h 2 h 3 h 4 h 5 h 6 m 7 h 8 m 9 m 10 h
+1 m 2 h 3 h 4 m 5 h 6 m 7 h 8 m 9 h 10 m
+1 m 2 h 3 m 4 m 5 h 6 m 7 h 8 m 9 m 10 m
