@@ -7,8 +7,9 @@ void src_loc_set(char *src_loc,int num,char *arg)
 {
 	char buffer[5];
 	sprintf(buffer,"%d",num);
-	strcpy(src_loc,arg);
-	strcat(src_loc,"dataset/");
+	strcpy(src_loc,"dataset/");
+	strcat(src_loc,arg);
+	strcat(src_loc,"/");
 	strcat(src_loc,arg);
 	strcat(src_loc,buffer);
 	strcat(src_loc,".jpg");
@@ -17,7 +18,8 @@ void dst_loc_set(char *dst_loc,int num1, int num2,char *arg)
 {
 	char buffer[5];
 	sprintf(buffer,"%d",num1);
-	strcpy(dst_loc,buffer);
+	strcpy(dst_loc,"classes/");
+	strcat(dst_loc,buffer);
 	strcat(dst_loc,"/");
 	sprintf(buffer,"%d",num2);
 	strcat(dst_loc,arg);
@@ -36,8 +38,9 @@ void execute_cmd(char *cmd ,char *src_loc, char *dst_loc)
 int main(int argc, char **argv)
 {
 	char *data = (char *)malloc(20);
-	strcpy(data,argv[1]);
-	strcat(data,"data.txt");
+	strcpy(data,"data/");
+	strcat(data,argv[1]);
+	strcat(data,".txt");
 	FILE *fp = fopen(data,"r+"),*src,*dst,*result;
 	result = fopen("result.txt","a+");
 	double pr[11]={0};
