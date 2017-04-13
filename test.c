@@ -1,8 +1,20 @@
+#include <opencv2/opencv.hpp>
+
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
+#include <iostream>
+#include <string>
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
 #include <math.h>
 #include <limits.h>
+
+using namespace cv;
 
 #define sq(x) (x*x)
 #define CLASSES 10
@@ -151,14 +163,19 @@ img *search_database(img **database,int *size, img *input, img *output)
 				else if(dist_l>dist_r) {dist = dist_r; temp = right;}
 				k++;
 			}while(dist<=eucl_dist);
-			//printf("min_dist = %.2f prev_dist = %.2f\n",min_dist,prev_dist);
-			if(abs(min_dist-prev_dist)<5){
+			printf("min_dist = %.2f prev_dist = %.2f\n",min_dist,prev_dist);
+			if(abs(min_dist-prev_dist)<1){
 				min_dist=(min_dist>=prev_dist)?prev_dist:min_dist;
 				output = prev;
+				printf("If prev->name =%s\n",prev->path);
 			}
 			else
 			{
-				min_dist=(min_dist>=prev_dist)?prev_dist:min_dist;
+				if(min_dist>=prev_dist){
+					min_dist=prev_dist;
+					output = prev;
+					printf("else prev->name =%s\n",prev->path);
+				}
 			}
 		}
 	return output;
@@ -184,5 +201,10 @@ int main(int argc, char **argv)
 	output = search_database(database,size,input,output);
 	printf("\nOutput:\nCoin position: %d %d\nMagnitude: %.2f\n",output->c[0],output->c[1],output->mag);
 	printf("Image File: %s\n",output->path);
+	Mat myimg = imread(output->path,1);
+	resize(myimg, myimg, cv::Size(), 0.2, 0.2);
+	namedWindow( "myimg", WINDOW_AUTOSIZE );	
+	imshow("myimg",myimg);
+	waitKey(0);	
 	return 0;
 }
