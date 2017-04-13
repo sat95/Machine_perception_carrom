@@ -1,4 +1,4 @@
-/*#include <opencv2/opencv.hpp>
+#include <opencv2/opencv.hpp>
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgcodecs.hpp>
@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include <string>
-*/
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,7 +14,7 @@
 #include <math.h>
 #include <limits.h>
 
-//using namespace cv;
+using namespace cv;
 
 #define sq(x) (x*x)
 #define CLASSES 10
@@ -201,10 +201,10 @@ int main(int argc, char **argv)
 	output = search_database(database,size,input,output);
 	printf("\nOutput:\nCoin position: %.2lf %.2lf\nMagnitude: %.2lf\n",output->c[0],output->c[1],output->mag);
 	printf("Image File: %s\n",output->path);
-/*	Mat myimg = imread(output->path,1);
+	Mat myimg = imread(output->path,1);
 	resize(myimg, myimg, cv::Size(), 0.3, 0.3);
 	namedWindow( "myimg", WINDOW_AUTOSIZE );	
 	imshow("myimg",myimg);
-	waitKey(0);*/	
+	waitKey(0);	
 	return 0;
 }
