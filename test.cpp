@@ -1,4 +1,4 @@
-#include <opencv2/opencv.hpp>
+/*#include <opencv2/opencv.hpp>
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgcodecs.hpp>
@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include <string>
-
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,14 +14,14 @@
 #include <math.h>
 #include <limits.h>
 
-using namespace cv;
+//using namespace cv;
 
 #define sq(x) (x*x)
 #define CLASSES 10
 typedef struct image{
 	int pos;
 	char path[20];
-	int c[2];
+	double c[2];
 	double mag;
 }img;
 
@@ -60,7 +60,7 @@ void print_database(img **database,int *size)
 			printf("%d%% Class\n",(i+1)*10);
 		for(j=0;j<size[i];j++)
 		{
-			printf("%d) %s -> %d %d %.2f\n"
+			printf("%d) %s -> %2.lf %.2lf %.2lf\n"
 				,database[i][j].pos
 				,database[i][j].path
 				,database[i][j].c[0]
@@ -80,7 +80,7 @@ void create_database(FILE *fp,img **database,int *size)
 			for(i=0;i<num;i++)
 			{
 				fscanf(fp,"%[^\n]",database[k][i].path);
-				fscanf(fp,"%d %d ",
+				fscanf(fp,"%lf %lf ",
 					database[k][i].c+0,
 					database[k][i].c+1);
 					database[k][i].pos=i;
@@ -195,16 +195,16 @@ int main(int argc, char **argv)
 	sort_database(database,size);
 	print_database(database,size);
 	printf("\nEnter Input X and Y coordinates\n");
-	scanf("%d %d",input->c+0,input->c+1);
+	scanf("%lf %lf",input->c+0,input->c+1);
 	input->mag = sqrt(sq(input->c[0])+sq(input->c[1]));
-	printf("\nInput Magnitude %.2f\n",input->mag);
+	printf("\nInput Magnitude %.2lf\n",input->mag);
 	output = search_database(database,size,input,output);
-	printf("\nOutput:\nCoin position: %d %d\nMagnitude: %.2f\n",output->c[0],output->c[1],output->mag);
+	printf("\nOutput:\nCoin position: %.2lf %.2lf\nMagnitude: %.2lf\n",output->c[0],output->c[1],output->mag);
 	printf("Image File: %s\n",output->path);
-	Mat myimg = imread(output->path,1);
+/*	Mat myimg = imread(output->path,1);
 	resize(myimg, myimg, cv::Size(), 0.3, 0.3);
 	namedWindow( "myimg", WINDOW_AUTOSIZE );	
 	imshow("myimg",myimg);
-	waitKey(0);	
+	waitKey(0);*/	
 	return 0;
 }
