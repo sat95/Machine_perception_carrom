@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/khanjan/MP/MP_carrom/learn.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+string.h
+-
+
