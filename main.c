@@ -4,7 +4,7 @@
 
 int main(int argc, char **argv)
 {
-	char *data = (char *)malloc(20);
+	char *data = (char *)malloc(50);
 	strcpy(data,"python coinCenter.py ");
 	strcat(data,argv[1]);
 	strcat(data," | ./test");
