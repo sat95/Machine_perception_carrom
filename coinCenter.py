@@ -15,7 +15,7 @@ for i in circles[0,:]:
     #cv2.circle(cimg,(i[0],i[1]),i[2],(0,255,0),2)
     # draw the center of the circle
     cv2.circle(cimg,(i[0],i[1]),2,(0,0,255),3)
-    print (i[0],i[1])
+    print i[0], i[1]
 
 #cimg = cv2.resize(cimg, (1000, 500))
 #cv2.imshow('detected circles',cimg)
