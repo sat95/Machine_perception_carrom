@@ -8,6 +8,5 @@ int main(int argc, char **argv)
 	strcpy(data,"python coinCenter.py ");
 	strcat(data,argv[1]);
 	strcat(data," | ./test");
-	//printf("%s\n" data);
 	system(data);
 }

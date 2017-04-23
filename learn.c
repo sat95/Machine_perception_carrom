@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 	strcpy(data,"data/");
 	strcat(data,argv[1]);
 	strcat(data,".txt");
-	FILE *fp = fopen(data,"r+"),*src,*dst,*result;
+	FILE *fp = fopen(data,"w+"),*src,*dst,*result;
 	result = fopen("result.txt","a+");
 	double pr[11]={0};
 	int i,j,num,diff=0;
