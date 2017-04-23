@@ -1,1 +1,0 @@
-/usr/bin/cc     CMakeFiles/learn.dir/learn.c.o  -o learn -rdynamic 

@@ -1,3 +1,0 @@
-/home/khanjan/MP/MP_carrom/CMakeFiles/edit_cache.dir
-/home/khanjan/MP/MP_carrom/CMakeFiles/rebuild_cache.dir
-/home/khanjan/MP/MP_carrom/CMakeFiles/test.dir
